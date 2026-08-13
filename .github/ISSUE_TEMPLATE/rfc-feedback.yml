@@ -1,0 +1,43 @@
+name: RFC feedback
+description: Review an existing FabricTrace RFC or propose a material specification change.
+title: "RFC: "
+labels:
+  - rfc
+  - needs-triage
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping shape FabricTrace. Ground feedback in a real operating condition whenever possible.
+  - type: input
+    id: rfc
+    attributes:
+      label: RFC
+      description: Which RFC and section does this concern?
+      placeholder: RFC-001, Section 8.5
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What operational, interoperability, performance, or correctness problem should the RFC address?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: Describe the semantic change, including any schema examples.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives and trade-offs
+      description: What alternatives did you consider? Include compatibility, privacy, and performance implications.
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Operational evidence
+      description: Link documentation, incident evidence, benchmarks, or experiments where possible.

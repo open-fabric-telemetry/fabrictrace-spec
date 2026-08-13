@@ -1,0 +1,45 @@
+name: AI fabric use case
+description: Describe an incident or operator workflow FabricTrace should support.
+title: "Use case: "
+labels:
+  - use-case
+  - needs-triage
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not include customer data, prompts, tensor contents, or other sensitive workload payloads.
+  - type: textarea
+    id: incident
+    attributes:
+      label: Incident or workflow
+      description: What happened, who needed to investigate it, and why was it difficult?
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Operator question
+      description: What precise question should FabricTrace help answer?
+      placeholder: Which fabric condition affected this slow collective?
+    validations:
+      required: true
+  - type: textarea
+    id: signals
+    attributes:
+      label: Available signals
+      description: Which scheduler, runtime, accelerator, NIC, switch, topology, or application facts exist today?
+    validations:
+      required: true
+  - type: textarea
+    id: gaps
+    attributes:
+      label: Current gap
+      description: What cannot be proven or diagnosed with current tools?
+    validations:
+      required: true
+  - type: textarea
+    id: success
+    attributes:
+      label: Success criteria
+      description: What would a useful FabricTrace output allow an operator to do?
