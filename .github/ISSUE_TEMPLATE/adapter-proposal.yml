@@ -1,0 +1,43 @@
+name: Adapter proposal
+description: Propose a source adapter or integration for FabricTrace.
+title: "Adapter: "
+labels:
+  - adapter
+  - needs-triage
+body:
+  - type: input
+    id: source
+    attributes:
+      label: Source system
+      description: Name the runtime, scheduler, accelerator, NIC, switch, or telemetry system.
+      placeholder: NCCL profiler plugin
+    validations:
+      required: true
+  - type: textarea
+    id: facts
+    attributes:
+      label: Facts available
+      description: List lifecycle events, counters, topology data, and stable resource identities the source can emit.
+    validations:
+      required: true
+  - type: textarea
+    id: joins
+    attributes:
+      label: Join keys and boundaries
+      description: Which opaque keys exist, what do they identify, and which sources can emit them?
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Performance and capture impact
+      description: Describe data-path changes, synchronization behavior, buffering, sampling, and expected overhead.
+    validations:
+      required: true
+  - type: textarea
+    id: limitations
+    attributes:
+      label: Limitations and data quality
+      description: Describe loss, sampling, clock domains, unsupported hardware, privacy concerns, and vendor-specific behavior.
+    validations:
+      required: true
